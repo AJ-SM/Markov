@@ -8,9 +8,12 @@ path = f"D:\Storeage-1\Main\ML-Model\examps\RDJ.jpg"
 img = cv.imread(path)
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
-# resized = cv.resize(gray, (64, 64))
+
 resized = cv.resize(gray, (664, 664))
 
+
+
+# Features 1 
 def LBP():
     path = f"D:\Storeage-1\Main\ML-Model\examps\RDJ.jpg"
     img = cv.imread(path)
@@ -25,6 +28,8 @@ def LBP():
     plt.axis('off') 
     plt.show()
 
+
+# Features 2
 def Gabor():
     path = f"D:\Storeage-1\Main\ML-Model\examps\RDJ.jpg"
     img = cv.imread(path)
@@ -44,6 +49,10 @@ def Gabor():
     plt.show()
 
 
+
+
+
+# Features 3
 def HOG():
     # 1. Load the image
     img_path = r'D:\Storeage-1\Main\ML-Model\examps\RDJ.jpg'
@@ -53,28 +62,23 @@ def HOG():
         print("Error: Could not read image.")
         return
 
-    # 2. Convert to Grayscale (Fixes the ValueError)
-    # The paper uses grayscale images for HOG, LBP, and Gabor analysis
+
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY) 
 
-    # 3. Resize as per paper requirements (64x64 or 80x80)
-    # This ensures your spatial dimensions are consistent
+
     resized = cv.resize(gray, (64, 64))
 
-    # 4. Extract HOG features
-    # orientations=8 as specified in the methodology
+
     features, hog_image = hog(resized, orientations=8, 
                                pixels_per_cell=(8, 8),
                                cells_per_block=(2, 2), 
                                visualize=True, 
                                feature_vector=True)
 
-    # 5. Display the result
     plt.imshow(hog_image, cmap='gray')
     plt.title("HOG Feature Visualization")
     plt.show()
 
-# Run the function
 HOG()
 Gabor()
 LBP()
