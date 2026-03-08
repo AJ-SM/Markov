@@ -3,3 +3,11 @@ opencv-python
 numpy
 matplotlib
 mediapipe
+
+
+# Direct Implementation lib for rPPG
+#pyVHR
+#numba
+#cupy
+
+#heratpy
