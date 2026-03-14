@@ -7,6 +7,9 @@ pytorch
 torchvision
 
 
+# M2 Reqs 
+
+
 # Direct Implementation lib for rPPG
 #pyVHR
 #numba
