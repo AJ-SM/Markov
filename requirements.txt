@@ -3,11 +3,14 @@ opencv-python
 numpy
 matplotlib
 mediapipe
-pytorch
+torch
 torchvision
 
 
-# M2 Reqs 
+# Detph (DeFA)
+timm
+pyVHR
+ 
 
 
 # Direct Implementation lib for rPPG
